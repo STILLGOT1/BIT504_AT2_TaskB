@@ -7,11 +7,11 @@ public class GameMain extends JPanel implements MouseListener{
 	// number of ROWS by COLS cell constants 
 	public static final int ROWS = 3;     
 	public static final int COLS = 3;  
-	public static final String TITLE = "Tic Tac Toe";
+	public static final String TITLE = "KING PONG";
 
 	//constants for dimensions used for drawing
 	//cell width and height
-	public static final int CELL_SIZE = 200;
+	public static final int CELL_SIZE = 250;
 	//drawing canvas
 	public static final int CANVAS_WIDTH = CELL_SIZE * COLS;
 	public static final int CANVAS_HEIGHT = CELL_SIZE * ROWS;
@@ -46,10 +46,10 @@ public class GameMain extends JPanel implements MouseListener{
        
 		// Setup the status bar (JLabel) to display status message       
 		statusBar = new JLabel("         ");       
-		statusBar.setFont(new Font(Font.DIALOG_INPUT, Font.ITALIC, 25));       
+		statusBar.setFont(new Font(Font.DIALOG_INPUT, Font.BOLD, 40));       
 		statusBar.setBorder(BorderFactory.createEmptyBorder(2, 5, 4, 5));       
 		statusBar.setOpaque(true);       
-		statusBar.setBackground(Color.GREEN);  
+		statusBar.setBackground(Color.BLACK);  
 		
 		//layout of the panel is in border layout
 		setLayout(new BorderLayout());       
@@ -125,17 +125,17 @@ public class GameMain extends JPanel implements MouseListener{
 			}  }
 			
 			else if (currentState == GameState.Nought_won) {          
-				statusBar.setForeground(Color.RED);          
+				statusBar.setForeground(Color.YELLOW);          
 				statusBar.setText("'O' Won! Click to play again."); 
 			
 			 
 				
 			} else if (currentState == GameState.Cross_won) {          
-				statusBar.setForeground(Color.RED);          
+				statusBar.setForeground(Color.YELLOW);          
 				statusBar.setText("'X' Won! Click to play again."); 
 				
 			}      else if (currentState == GameState.Draw) {          
-				statusBar.setForeground(Color.RED);          
+				statusBar.setForeground(Color.YELLOW);          
 				statusBar.setText("It's a Draw! Click to play again.");   
 			}
 		
